@@ -1,0 +1,19 @@
+# OCI Authentication
+region           = "<REGION>"          # e.g., "mx-queretaro-1"
+tenancy_ocid     = "<TENANCY_OCID>"    # ocid1.tenancy.oc1..xxx
+user_ocid        = "<USER_OCID>"       # ocid1.user.oc1..xxx
+fingerprint      = "<FINGERPRINT>"     # xx:xx:xx:xx:xx:xx:xx...
+private_key_path = "<PRIVATE_KEY_PATH>" # e.g., "~/.oci/oci_api_key.pem"
+
+# Compartment (can be the same as tenancy_ocid for root compartment)
+compartment_ocid = "<COMPARTMENT_OCID>" # ocid1.compartment.oc1..xxx
+
+# Instance Configuration for OCI Always-Free
+vm_name              = "oracle23ai-instance"
+vm_shape             = "VM.Standard.A1.Flex"
+ocpus                = 4        # máximo gratuito para ARM
+memory_in_gbs        = 24       # máximo gratuito para ARM
+boot_volume_size_in_gbs = 200   # máximo gratuito
+
+# SSH Public Key para acceso a la instancia (sin espacios al final)
+ssh_public_key = "<SSH_PUBLIC_KEY>" # ssh-rsa AAAA...
